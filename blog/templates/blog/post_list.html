@@ -1,12 +1,28 @@
 <html>
-<head>
-  <title>Ana's Blog</title>
-</head>
-<body>
-  <h1>The Best Blog Ever</h1>
-  <h2>Welcome to Ana's Blog!</h2>
-  <p>This blog was coded by Ana and is the best blog ever</p>
-  <strong>Hi there!</strong>
-  <p>It works!</p>
-</body>
+    <head>
+      <title>Ana's Blog</title>
+    </head>
+    <body>
+      <div>
+        <h1><a href='/'>Ana's Blog</a></h1>
+      </div>
+      {% for post in posts %}
+          <div>
+            <p>Published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+      {% endfor %}
+      <div>
+        <p>Published: Saturday, 13th of July 2019</p>
+        <h2><a href='/'>My First Post</a></h2>
+        <p>My name is Anastasia.</p>
+      </div>
+
+      <div>
+        <p>Published: Saturday, 13th of July 2019</p>
+        <h2><a href='/'>My Second Post</a></h2>
+        <p>My birthday is the 3rd of June.</p>
+      </div>
+    </body>
 </html>
